@@ -1,0 +1,136 @@
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px 24px;
+    justify-items: center;
+    align-items: start;
+    margin: 32px auto;
+    max-width: 900px;
+}
+.servico-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f7faff;
+    border: 2.5px solid #b0c4de;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(176,196,222,0.10);
+    padding: 18px 12px 14px 12px;
+    min-width: 200px;
+    max-width: 260px;
+    text-align: center;
+}
+.servico-item img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+.servico-titulo {
+    font-weight: bold;
+    color: #3a4a6b;
+    margin-bottom: 6px;
+    font-size: 1.08em;
+}
+.servico-desc {
+    font-size: 0.98em;
+    color: #444;
+}
+a.contato-bloco {
+    max-width: 400px;
+    margin: 32px auto 32px auto;
+    text-align: center;
+}
+.contato-item {
+    margin-bottom: 18px;
+    font-size: 1.08em;
+}
+a.sobre, fieldset.sobre {
+    border: 2.5px solid #b0c4de;
+    border-radius: 18px;
+    background: #f7faff;
+    box-shadow: 0 2px 8px rgba(176,196,222,0.10);
+    max-width: 650px;
+    margin: 32px auto 32px auto;
+    padding: 24px 28px 18px 28px;
+}
+
+fieldset.sobre legend {
+    font-size: 1.25em;
+    color: #3a4a6b;
+    font-weight: bold;
+    padding: 0 12px;
+    letter-spacing: 1px;
+}
+
+p.principal {
+    font-size: 1.22em;
+    color: #222;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+body{
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    #logo {
+        display: block;
+        width: 100vw;
+         height: 30vh;
+            margin: 0 auto;
+    }
+}
+a, h1, h2, h3, fieldset {
+    border: 2.5px solid #b0c4de;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-width: 2.5px;
+    border-color: #b0c4de;
+    border-radius: 18px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+a:hover {
+    border: #333 solid 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: #ff0000;
+    color: #ffffff;
+}
+a:active {
+    border: #333 solid 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: #15f124;
+    color: #ffffff;
+}
+a:visited {
+    border: #a80808 solid 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: #ffffff;
+    color: #cc0a0a;
+}
+a {
+    width: 5px;
+    margin: 5px ;
+    padding: 3px;
+    text-decoration: none;
+    color: #333;
+    border: #333 solid 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
