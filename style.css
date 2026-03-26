@@ -1,3 +1,23 @@
+:root {
+    --bg: #ffffff;
+    --text: #222222;
+    --card-bg: #f7faff;
+    --border: #b0c4de;
+    --title: #333333;
+    --button-bg: #e9f2ff;
+    --button-text: #22314d;
+}
+
+body.tema-escuro {
+    --bg: #111827;
+    --text: #e5e7eb;
+    --card-bg: #1f2937;
+    --border: #475569;
+    --title: #f3f4f6;
+    --button-bg: #334155;
+    --button-text: #f8fafc;
+}
+
 .servicos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -11,8 +31,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #f7faff;
-    border: 2.5px solid #b0c4de;
+    background: var(--card-bg);
+    border: 2.5px solid var(--border);
     border-radius: 18px;
     box-shadow: 0 2px 8px rgba(176,196,222,0.10);
     padding: 18px 12px 14px 12px;
@@ -29,13 +49,13 @@
 }
 .servico-titulo {
     font-weight: bold;
-    color: #3a4a6b;
+    color: var(--text);
     margin-bottom: 6px;
     font-size: 1.08em;
 }
 .servico-desc {
     font-size: 0.98em;
-    color: #444;
+    color: var(--text);
 }
 a.contato-bloco {
     max-width: 400px;
@@ -47,9 +67,9 @@ a.contato-bloco {
     font-size: 1.08em;
 }
 a.sobre, fieldset.sobre {
-    border: 2.5px solid #b0c4de;
+    border: 2.5px solid var(--border);
     border-radius: 18px;
-    background: #f7faff;
+    background: var(--card-bg);
     box-shadow: 0 2px 8px rgba(176,196,222,0.10);
     max-width: 650px;
     margin: 32px auto 32px auto;
@@ -66,7 +86,7 @@ fieldset.sobre legend {
 
 p.principal {
     font-size: 1.22em;
-    color: #222;
+    color: var(--text);
     line-height: 1.7;
     text-align: center;
     margin: 0;
@@ -76,33 +96,71 @@ p.principal {
     padding: 0;
 }
 body{
-    background-color: #ffffff;
+    background-color: var(--bg);
+    color: var(--text);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    #logo {
-        display: block;
-        width: 100vw;
-         height: 30vh;
-            margin: 0 auto;
-    }
+}
+
+.logo-wrap {
+    position: relative;
+}
+
+#logo {
+    display: block;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    margin: 0 auto;
 }
 a, h1, h2, h3, fieldset {
-    border: 2.5px solid #b0c4de;
+    border: 2.5px solid var(--border);
     border-radius: 18px;
     box-sizing: border-box;
 }
 h1, h2, h3 {
-    color: #333;
+    color: var(--title);
     text-align: center;
     font-weight: 600;
     letter-spacing: 1px;
     border-width: 2.5px;
-    border-color: #b0c4de;
+    border-color: var(--border);
     border-radius: 18px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
+
+#temaBtn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    margin: 0;
+    padding: 10px 16px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+#temaBtn:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+@media (max-width: 600px) {
+    #temaBtn {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.88rem;
+    }
+}
+
 a:hover {
     border: #333 solid 5px;
     border-radius: 10px;
